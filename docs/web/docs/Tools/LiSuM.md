@@ -19,8 +19,8 @@ evaluate complex intersections. The control logics created with it can
 be directly uploaded to real controllers or tested with SUMO (using
 LiSuM) and VISSIM, a proprietary microscopic 3D traffic simulator.
 
-LiSuM was built on Java technology and thus can be run on any operating
-system supporting Java. LiSuM is licensed (just like SUMO) under the
+LiSuM is built in [Java©](https://www.oracle.com/java/) and thus can be run on almost any operating
+system. LiSuM is licensed (just like SUMO) under the
 [EPLv2](http://www.eclipse.org/legal/epl-v20.html).
 
 ![flowws.png](../images/Flowws.png "flowws.png")
@@ -39,24 +39,24 @@ for batch processing called [\#LiSuM-Core](#lisum-core)
 
 The installation of LiSuM is straightforward and it may not present
 major difficulties. It is recommended to have Java SE Runtime Environment
-(version 8 and later) and SUMO (version 1.0.1 and later) installed
+(version 8 and above for lisum-core and version 11 and above for lisum-gui) and SUMO (version 1.0.1 and later) installed
 before beginning with the installation. In order to install it on a
 Windows machine just download and execute the provided *msi* file and
 follow its instructions. On Ubuntu or other Linux distributions download
 the provided *zip* file and unzip it in any directory of your choice; to
 start LiSuM, seek the *jar* file, open a terminal and execute it using
-the well-known <i>java -jar</i> command.
+the <i>java -jar</i> command.
 
 When LiSuM is started for the first time, the user is prompt to select a
 directory which is going to be used as the workspace directory. The
 workspace is the directory where LiSuM looks for existing simulation
 projects, where new ones should be stored and where the system
-preferences are saved. If needed use the system preferences window to
+preferences are saved. In case of need use the System Preferences window to
 change the workplace path.
 
 ## Getting started
 
-Open LiSuM, set the SUMO path in the system preferences dialog window
+Open LiSuM, set the path to SUMO in the system preferences dialog window
 and open an existing simulation project from the workspace. In the Tools
 menu, select "Start Lisa+ Virtual Controller" to start an instance of
 the LISA+ Virtual Controller. Pressing Ctrl+p or clicking on the "Play"
@@ -69,7 +69,7 @@ control units settings during the execution of the simulation.
 
 For better understanding of how LiSuM works, you can play around with
 the two sample projects (sampleSimulation and simpleSampleSimulation)
-located in the workspace.
+located [here](https://github.com/maxidigital/LisumExamples).
 
 ### Creating a new simulation project
 
@@ -170,8 +170,8 @@ the program, or enabling or disabling program settings like VA
 
 It is also possible to deactivate the communication with LISA+ by
 unclicking the check box right of the control units combo box (image
-below). Per default, LISA+ controls units not being assigned to any Sumo
-intersection appear disabled.
+below). Per default, LISA+ controls units which are not assigned to any SUMO
+intersection will appear as disabled.
 
 ![Controlunits_on.PNG](../images/Controlunits_on.PNG "Controlunits_on.PNG")Checkbox to deactivate the communication with LISA+
 
@@ -194,7 +194,7 @@ Per default the LISA+ Virtual Controller and its configuration file
 (OmlFgServer.ini) are to be found in the
 <span style="background:#ffe6e6">OmlFgServer</span> directory located in
 the LiSuM installation directory. This path can be changed in the System
-Preferences Window (*Menu: Tools -\> Preferences*).
+Preferences Window (*Menu: Tools -\> System Preferences*).
 
 ![VirtualController.PNG](../images/VirtualController.PNG "VirtualController.PNG")LISA+ Virtual Controller (Windows 7)
 
@@ -214,7 +214,7 @@ Example inputs can be found at
 
 ## The phase state matching problem
 
-In the real world and in LISA+l, the right-of-way rules for a particular
+In the real world and in LISA+, the right-of-way rules for a particular
 stream may be controlled by a combination of signals (yellow blinkers,
 directional arrows, ...). Lisum translates the combination of signal
 states into a single sumo signal state. In order to do this, the signal
@@ -229,11 +229,7 @@ the overhead sign.
 
 ## Compiling LiSuM
 
-If you want to contribute to the source or want to build for another reason
-make sure you have maven and a compatible JDK (8 or above) on your system.
-The cmake configuration step will create a "lisum-core" and a "lisum-gui" target
-(as well as a "lisum" target to build them both). Just run this target either
-using make (in a Linux or macOS like environment) or by running the target from
-your IDE (e.g. Visual Studio on Windows). If you are using JDK8 and want the GUI
-you need to make sure that you have openjfx8 installed, since there is no openjfx
-for JDK8 on maven.
+In order to compile LiSuM make sure you have [Apache Maven](https://maven.apache.org/) and a compatible JDK (version 8 or above for lisum-core and version 11 or above for lisum-gui) in your system.
+The cmake configuration step will create a "lisum-core" and a "lisum-gui" target (as well as a "lisum" target to build them both). Just run this target either
+using make (in a Linux or macOS like environment) or by running the target from your IDE (e.g. Visual Studio on Windows).
+LiSuM was originally developed with [Apache Netbeans](https://netbeans.apache.org/).
