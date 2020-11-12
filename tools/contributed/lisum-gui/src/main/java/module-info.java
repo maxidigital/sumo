@@ -13,8 +13,8 @@ module LisumGui {
     requires commons.logging;
     requires org.apache.commons.codec;
     requires commons.io;
-    requires log4j.core;
-    requires log4j.api;
+    //requires log4j.core;
+    //requires log4j.api;
     requires traas;
     requires java.xml.ws;
     requires java.xml.soap;
