@@ -19,4 +19,12 @@
         <name>DLR - German Aerospace Center</name>
         <url>https://www.dlr.de/ts/</url>
     </organization>
+    
+    <developers>
+        <developer>
+            <id>max</id>
+            <name>Maximiliano Bottazzi</name>
+            <email>maximiliano.bottazzi@dlr.de</email>
+        </developer>
+    </developers>
 </project>
