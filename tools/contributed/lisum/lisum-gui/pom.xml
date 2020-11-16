@@ -43,7 +43,7 @@
                 </configuration>
             </plugin>
             
-            <!--<plugin>
+            <plugin>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.1</version>
                 <executions>
@@ -61,7 +61,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
             
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
