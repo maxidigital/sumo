@@ -9,8 +9,7 @@
     
     <modules>
         <module>lisum-core</module>
-        <module>lisum-gui</module>
-        <module>lisumgui</module>
+        <module>lisum-gui</module>        
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
